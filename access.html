@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Access Control</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #access-form {
+        margin-top: 100px;
+    }
+</style>
+</head>
+<body>
+
+<div id="access-form">
+    <h2>Enter Access Code:</h2>
+    <input type="text" id="access-code" placeholder="Enter code">
+    <button onclick="checkAccess()">Submit</button>
+    <p id="error-message" style="color: red; display: none;">Incorrect code. Please try again.</p>
+</div>
+
+<script>
+function checkAccess() {
+    var accessCode = document.getElementById('access-code').value.trim();
+    // Replace 'your-access-code' with the actual access code you want to validate against
+    if (accessCode === 'Anne2342') {
+        // Redirect to the desired page upon successful validation
+        window.location.href = 'Anne_Kinghorn/index.html';
+    } else if (accessCode === 'Gevallin0023') {
+        // Redirect to the desired page upon successful validation
+        window.location.href = 'Gevallin/index.html';
+    } else {
+        // Display error message if access code is incorrect
+        document.getElementById('error-message').style.display = 'block';
+    }
+}
+</script>
+
+</body>
+</html>

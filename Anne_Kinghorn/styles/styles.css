@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -15,36 +15,111 @@ iframe {
     display: block;
 }
 
+input, button, textarea {
+    font: inherit;
+}
+
 /* FONT STYLES*/
 
-.lugrasimo-regular {
-    font-family: "Lugrasimo", cursive;
-    font-weight: 400;
-    font-style: normal;
-  }
+:root{
+    --FONT-COLOR: rgb(255, 255, 214);
+    --HEADER-BGCOLOR: rgb(156, 115, 81);
+}
+
+/* UTILITY */
+
+.nowrap {
+    white-space: nowrap;
+}
 
 /* GENERALSTYLES*/
 
 
+html{
+    background-color: rgb(252, 231, 204);
+    background-image: linear-gradient(rgb(230, 230, 255), rgb(255, 228, 177), rgb(185, 185, 214));
+    font-family: "Poppins", sans-serif;
+}
+
 body{
     display: flex;
     flex-direction: column;
-    font-family: ;
+}
 
+main {
+    width: min(1024px, 100vw);
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
 }
 
 header{
+    padding: 1rem;
     width: 100%;
-    background-color: aquamarine;
+    background-color: var(--HEADER-BGCOLOR);
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    
-    
-
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
-nav ul{
+h1 {
+    font-size: 1.5em;
+    color: var(--FONT-COLOR);
+}
+    
+.nav_item{
+    font-size: 1.5em;
+}
+
+li{
     list-style: none;
+}
+
+header a:any-link{
+    color: var(--FONT-COLOR);
+    text-decoration: none;    
+}
+
+header a:hover, a:focus {
+    color: rgba(255, 255, 245, 0.795);
+}
+
+.fb-video{
+    width: 99%;
+}
+
+.p_intro{
+    margin: 1rem 0 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.review{
+    width: 100%;
+}
+
+map {
+    width: 100vw;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--FONT-COLOR);
+    z-index: 1;
+    position: sticky;
+    bottom: 0;
+    align-items: center;
+}
+
+footer p {
+    margin: 1rem;
 }
